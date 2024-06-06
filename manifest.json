@@ -1,0 +1,96 @@
+{
+  "required_api_version": "2",
+  "name": "kobold",
+  "description": "A ulauncher extension allowing you to query and interact with an koboldcpp instance",
+  "developer_name": "Abhishek Baddi",
+  "icon": "images/llama.png",
+  "options": {
+    "query_debounce": 0.1
+  },
+  "preferences": [
+    {
+      "id": "llama_kw",
+      "type": "keyword",
+      "name": "Llama",
+      "description": "Keyword to trigger the extension",
+      "default_value": "ai"
+    },
+    {
+      "id": "llama_host",
+      "type": "text",
+      "name": "Llama Host",
+      "description": "llama host to connect to",
+      "default_value": "http://localhost:5001"
+    },
+    {
+      "id": "llama_system_prompt",
+      "type": "text",
+      "name": "System Prompt",
+      "description": "Provide a system prompt to overwrite what is in your particular modelfile",
+      "default_value": "You are an inline assitant, keep your responses short. "
+    },
+    {
+      "id": "llama_headers",
+      "type": "text",
+      "name": "Llama Headers",
+      "description": "Optional Headers to be passed on every llama api request. Comma separated for multiple values.",
+      "default_value": ""
+    },
+    {
+      "id": "llama_max_context_length",
+      "type": "text",
+      "name": "Max Context Length",
+      "description": "Maximum context length for the model",
+      "default_value": "2048"
+    },
+    {
+      "id": "llama_max_length",
+      "type": "text",
+      "name": "Max Length",
+      "description": "Maximum length of the generated response",
+      "default_value": "200"
+    },
+    {
+      "id": "llama_rep_pen",
+      "type": "text",
+      "name": "Repetition Penalty",
+      "description": "Penalty for repeated words in the generated response",
+      "default_value": "1.1"
+    },
+    {
+      "id": "llama_rep_pen_range",
+      "type": "text",
+      "name": "Repetition Penalty Range",
+      "description": "Range for applying the repetition penalty",
+      "default_value": "256"
+    },
+    {
+      "id": "llama_rep_pen_slope",
+      "type": "text",
+      "name": "Repetition Penalty Slope",
+      "description": "Slope for applying the repetition penalty",
+      "default_value": "1"
+    },
+    {
+      "id": "llama_temperature",
+      "type": "text",
+      "name": "Temperature",
+      "description": "Controls the randomness of the response",
+      "default_value": "0.5"
+    },
+    {
+      "id": "llama_top_k",
+      "type": "text",
+      "name": "Top K",
+      "description": "Number of highest probability tokens to consider for the next word",
+      "default_value": "100"
+    },
+    {
+      "id": "llama_top_p",
+      "type": "text",
+      "name": "Top P",
+      "description": "Cumulative probability threshold for token selection",
+      "default_value": "0.9"
+    }
+  ]
+}
